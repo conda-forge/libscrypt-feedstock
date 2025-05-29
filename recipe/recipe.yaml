@@ -16,7 +16,7 @@ build:
   script:
     - make install${{ '-osx' if osx else '' }} PREFIX=$PREFIX
     - make install-static PREFIX=$PREFIX
-  number: 0
+  number: 1
 
 requirements:
   build:
