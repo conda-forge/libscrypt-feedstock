@@ -16,14 +16,14 @@ build:
   script:
     - make install${{ '-osx' if osx else '' }} PREFIX=$PREFIX
     - make install-static PREFIX=$PREFIX
-  number: 1
+  number: 2
 
 requirements:
   build:
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
     - make
-    - pkg-config
+    - pkgconf
   run_exports:
     - ${{ pin_subpackage(name) }}
 
